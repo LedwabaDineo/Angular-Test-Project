@@ -1,0 +1,37 @@
+.personal-details-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form {
+  padding: 100px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.readonly-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.editable-fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.mdc-text-field--disabled.mdc-text-field--filled {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .personal-details-card {
+    padding: 10px;
+  }
+
+  .form {
+    padding: 0;
+  }
+}

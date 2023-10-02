@@ -1,0 +1,45 @@
+[
+  {
+    "username": "user1",
+    "password": "password1",
+    "firstName": "Dineo",
+    "lastName": "Ledwaba",
+    "email": "Dineo@example.com",
+    "dateOfBirth": "1980-01-15",
+    "identityNumber": "1234567890",
+    "mobileNumber": "06738384932",
+    "gender": "Male",
+    "maritalStatus": "Single",
+    
+    "address": {
+      "line1": "45 jean ave",
+      "line2": "",
+      "line3": "",
+      "suburb": "Centurion",
+      "city": "Pretoria",
+      "postalCode": "0157",
+      "country": "South Africa"
+    }
+  },
+  {
+    "username": "user2",
+    "password": "password2",
+    "firstName": "Jane",
+    "lastName": "Legora",
+    "email": "jane@example.com",
+    "dateOfBirth": "1990-05-20",
+    "identityNumber": "9876543210",
+    "mobileNumber": "987-654-3210",
+    "gender": "Female",
+    "maritalStatus": "Married",
+    "address": {
+      "line1": "13 casa bella",
+      "line2": "14 robin",
+      "line3": "",
+      "suburb": "Centurion",
+      "city": "Pretoria",
+      "postalCode": "0157",
+      "country": "South Africa"
+    }
+  }
+]

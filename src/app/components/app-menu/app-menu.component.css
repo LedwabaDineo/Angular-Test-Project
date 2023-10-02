@@ -1,0 +1,42 @@
+
+.mat-toolbar {
+    color: white; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .spacer {
+    flex: 1;
+  }
+  
+  /* Desktop styles */
+  @media screen and (min-width: 768px) {
+    .desktop-menu {
+      display: flex;
+      align-items: center;
+    }
+  
+    .desktop-menu a {
+      text-decoration: none;
+      color: white; 
+      margin-right: 20px;
+      transition: color 0.3s;
+    }
+  
+    .desktop-menu a:hover {
+      color: #FFC107;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .mobile-menu-button {
+      color: white; 
+    }
+  
+    .mobile-menu-button:hover {
+      color: #FFC107;
+    }
+  }
+  

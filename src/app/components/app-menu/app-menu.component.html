@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+  <span>My App</span>
+  <span class="spacer"></span>
+  <div class="desktop-menu" *ngIf="isDesktop">
+    <a mat-button routerLink="/home">
+      <mat-icon>home</mat-icon> Home
+    </a>
+    <a mat-button routerLink="/personal-details">
+      <mat-icon>person</mat-icon> Personal Details
+    </a>
+    <a mat-button routerLink="/contact-us">
+      <mat-icon>email</mat-icon> Contact Us
+    </a>
+    <a mat-button routerLink="/about-us">
+      <mat-icon>info</mat-icon> About Us
+    </a>
+    <a mat-button (click)="logout()">
+      <mat-icon>logout</mat-icon> Logout
+    </a>
+  </div>
+  <div class="mobile-menu" *ngIf="!isDesktop">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item routerLink="/home">
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a mat-menu-item routerLink="/personal-details">
+        <mat-icon>person</mat-icon> Personal Details
+      </a>
+      <a mat-menu-item routerLink="/contact-us">
+        <mat-icon>email</mat-icon> Contact Us
+      </a>
+      <a mat-menu-item routerLink="/about-us">
+        <mat-icon>info</mat-icon> About Us
+      </a>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon> Logout
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

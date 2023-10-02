@@ -1,0 +1,40 @@
+
+
+.content {
+  margin-top: 20%;
+  text-align: center;
+  color: #000;
+  font-weight: 300;
+}
+
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}

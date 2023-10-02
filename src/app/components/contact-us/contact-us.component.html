@@ -1,0 +1,26 @@
+<app-app-menu></app-app-menu>
+<div class="container">
+  <h2>Contact Us</h2>
+
+  <p>
+    If you have any questions or concerns, please feel free to contact us:
+  </p>
+
+  <div class="contact-info">
+    <div>
+      <strong>Name:</strong> {{ currentUser?.firstName }} {{ currentUser?.lastName }}
+    </div>
+    <div>
+      <strong>Email:</strong> {{ currentUser?.email }}
+    </div>
+    <div>
+      <strong>Phone:</strong> {{ currentUser.mobileNumber }}
+    </div>
+    <div>
+      <strong>Address:</strong> {{ currentUser?.address?.line1 }}
+    </div>
+    
+  </div>
+
+
+</div>

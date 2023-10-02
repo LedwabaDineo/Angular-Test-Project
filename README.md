@@ -25,3 +25,16 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+Before you begin, make sure you have the following software installed on your machine:
+
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment
+- [Angular CLI](https://github.com/angular/angular-cli) - Command-line interface for Angular development
+
+### Installation
+
+1. Clone this repository to your local machine
+2. npm install 
+3. make sure you have material installed ng add @angular/material
