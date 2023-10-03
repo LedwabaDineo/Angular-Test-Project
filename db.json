@@ -1,24 +1,24 @@
 {
   "users": {
-    "username": "test1",
-    "password": "Passoword1",
-    "firstName": "dineo",
-    "lastName": "ledwaba",
+    "username": "DineoLed",
+    "password": "Passowrd1",
+    "firstName": "Dineo",
+    "lastName": "Ledwaba",
     "email": "girly.ledwaba@gmail.com",
-    "dateOfBirth": "",
-    "identityNumber": "",
-    "mobileNumber": "",
-    "gender": "",
-    "maritalStatus": "",
+    "dateOfBirth": "1992/07/10",
+    "identityNumber": "9207100512088",
+    "mobileNumber": "+27679950616",
+    "gender": "female",
+    "maritalStatus": "married",
     "address": {
-      "line1": "",
-      "line2": "",
-      "line3": "",
-      "suburb": "",
-      "city": "",
-      "postalCode": "",
-      "country": ""
+      "line1": "13 Granite Cres",
+      "line2": "30 Stone Terrace",
+      "line3": "Monavoni",
+      "suburb": "Centurion, Monavoni",
+      "city": "Centurion, Monavoni",
+      "postalCode": "0157",
+      "country": "South Africa"
     },
-    "confirmPassword": "Passoword1"
+    "confirmPassword": "Password1"
   }
 }

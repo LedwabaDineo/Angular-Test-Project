@@ -58,9 +58,18 @@ export class PersonalDetailsComponent implements OnInit {
   }
 
   updateDetails() {
-    this.user = { ...this.editedUser };
-    this.isEditMode = false;
+    this.userService.updateUserDetails(this.editedUser).subscribe({
+      next: (response) => {
+        console.log('User details updated successfully.', response);
+        this.editedUser = { ...this.user };
+        this.isEditMode = false;
+      },
+      error: (error) => {
+        console.error('Error updating user details:', error);
+      }
+    });
   }
+  
 
   cancelEdit() {
     this.editedUser = { ...this.user };
