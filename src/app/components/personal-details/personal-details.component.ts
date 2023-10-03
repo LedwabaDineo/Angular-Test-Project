@@ -11,6 +11,7 @@ import { PersonalDetails } from 'src/app/models/personal-details.model';
 export class PersonalDetailsComponent implements OnInit {
   isEditMode: boolean = false;
   user: PersonalDetails = {
+    username: '',
     firstName: '',
     lastName: '',
     dateOfBirth: '',
@@ -35,15 +36,23 @@ export class PersonalDetailsComponent implements OnInit {
   constructor(private userService: PersonalDetailsService, private authService: AuthService) {}
 
   ngOnInit() {
-    const loggedInUser = this.authService.getCurrentUser();
-
-    // Fetch user data from the service and filter the logged-in user
-    this.userService.getUsers().subscribe((users: any[]) => {
-      this.user = users.find((user) => user.username === loggedInUser?.username) || ({} as PersonalDetails);
-      this.editedUser = { ...this.user };
+    this.userService.getUsers().subscribe({
+      next: (response: any) => {
+        if (response && typeof response === 'object' && response.hasOwnProperty('username')) {
+          this.user = response;
+          this.editedUser = { ...this.user };
+        } else {
+          console.error('Logged-in user not found in the response.');
+        }
+      },
+      error: (error) => {
+        console.error('Error fetching user data:', error);
+      }
     });
+    
   }
-
+  
+  
   editDetails() {
     this.isEditMode = true;
   }

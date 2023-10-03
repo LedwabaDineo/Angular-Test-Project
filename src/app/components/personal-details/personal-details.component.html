@@ -84,22 +84,22 @@
           <!-- Display editable fields when in edit mode -->
           <mat-form-field class="full-width">
             <mat-label>First Name</mat-label>
-            <input matInput [(ngModel)]="user.firstName">
+            <input matInput [(ngModel)]="editedUser.firstName">
           </mat-form-field>
 
           <mat-form-field class="full-width">
             <mat-label>Last Name</mat-label>
-            <input matInput [(ngModel)]="user.lastName">
+            <input matInput [(ngModel)]="editedUser.lastName">
           </mat-form-field>
 
           <mat-form-field class="full-width">
             <mat-label>Date of Birth</mat-label>
-            <input matInput [(ngModel)]="user.dateOfBirth">
+            <input matInput [(ngModel)]="editedUser.dateOfBirth">
           </mat-form-field>
 
           <mat-form-field class="full-width">
             <mat-label>Identity Number</mat-label>
-            <input matInput [(ngModel)]="user.identityNumber">
+            <input matInput [(ngModel)]="editedUser.identityNumber">
           </mat-form-field>
           <mat-form-field class="full-width">
             <mat-label>Mobile Number</mat-label>

@@ -1,0 +1,24 @@
+{
+  "users": {
+    "username": "test1",
+    "password": "Passoword1",
+    "firstName": "dineo",
+    "lastName": "ledwaba",
+    "email": "girly.ledwaba@gmail.com",
+    "dateOfBirth": "",
+    "identityNumber": "",
+    "mobileNumber": "",
+    "gender": "",
+    "maritalStatus": "",
+    "address": {
+      "line1": "",
+      "line2": "",
+      "line3": "",
+      "suburb": "",
+      "city": "",
+      "postalCode": "",
+      "country": ""
+    },
+    "confirmPassword": "Passoword1"
+  }
+}

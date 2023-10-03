@@ -38,3 +38,8 @@ Before you begin, make sure you have the following software installed on your ma
 1. Clone this repository to your local machine
 2. npm install 
 3. make sure you have material installed ng add @angular/material
+4. Install JSON Server:
+
+npm install -g json-server
+5. to start a json server run :
+ json-server --watch db.json --routes routes.json

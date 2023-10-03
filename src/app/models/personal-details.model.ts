@@ -6,6 +6,7 @@ export interface PersonalDetails {
     mobileNumber: string;
     gender: string;
     maritalStatus: string;
+    username: string;
     address: {
       line1: string;
       line2: string;
