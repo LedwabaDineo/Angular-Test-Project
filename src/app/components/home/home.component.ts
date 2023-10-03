@@ -16,13 +16,13 @@ export class HomeComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router, private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit(): void {
-    this.currentUser = this.authService.getCurrentUser();
-
-    this.breakpointObserver
-      .observe([Breakpoints.Handset])
-      .subscribe((result) => {
-        this.isMobile = result.matches;
-      });
+    this.authService.getCurrentUser().subscribe({
+      next: (user) => {
+        this.currentUser = user;
+      },
+      error: (error) => {
+        console.error('Error fetching current user:', error);
+      }
+    });
   }
-
 }

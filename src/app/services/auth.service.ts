@@ -25,9 +25,8 @@ export class AuthService {
     );
   }  
 
-  getCurrentUser(): any {
-    const userStr = localStorage.getItem('currentUser');
-    return userStr ? JSON.parse(userStr) : {};
+  getCurrentUser(): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/users`);
   }
 
   logout(): void {

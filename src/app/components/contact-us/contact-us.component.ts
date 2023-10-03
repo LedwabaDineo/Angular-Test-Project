@@ -7,12 +7,18 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./contact-us.component.css']
 })
 export class ContactUsComponent implements OnInit {
-  
   currentUser: any;
 
   constructor(private authService: AuthService) { }
   
   ngOnInit(): void {
-    this.currentUser = this.authService.getCurrentUser();
+    this.authService.getCurrentUser().subscribe({
+      next: (user) => {
+        this.currentUser = user;
+      },
+      error: (error) => {
+        console.error('Error fetching current user:', error);
+      }
+    });
   }
 }
