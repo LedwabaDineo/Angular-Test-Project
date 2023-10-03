@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -9,16 +10,11 @@ import { AuthService } from 'src/app/services/auth.service';
 export class ContactUsComponent implements OnInit {
   currentUser: any;
 
-  constructor(private authService: AuthService) { }
-  
+  constructor(private userService: UserService) { }
+
   ngOnInit(): void {
-    this.authService.getCurrentUser().subscribe({
-      next: (user) => {
-        this.currentUser = user;
-      },
-      error: (error) => {
-        console.error('Error fetching current user:', error);
-      }
+    this.userService.getCurrentUser().subscribe((user) => {
+      this.currentUser = user;
     });
   }
 }

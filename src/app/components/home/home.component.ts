@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
-import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +12,11 @@ export class HomeComponent implements OnInit {
   isMobile = false;
   breadcrumbItems: string[] = ['Home', 'Page'];
 
-  constructor(private authService: AuthService, private router: Router, private breakpointObserver: BreakpointObserver) { }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    this.authService.getCurrentUser().subscribe({
-      next: (user) => {
-        this.currentUser = user;
-      },
-      error: (error) => {
-        console.error('Error fetching current user:', error);
-      }
+    this.userService.getCurrentUser().subscribe((user) => {
+      this.currentUser = user;
     });
   }
 }
