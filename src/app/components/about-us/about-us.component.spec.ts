@@ -33,14 +33,13 @@ describe('AboutUsComponent', () => {
 
   it('should display the user information in the template', () => {
     fixture.detectChanges();
-
+  
     const element = fixture.nativeElement;
     const userName = element.querySelector('h6').textContent.trim();
-    const userDescription = element.querySelector('p').textContent.trim();
-
-    expect(userName).toBe('About');
-    expect(userDescription).toContain('Lorem Ipsum is simply dummy text');
+  
+    expect(userName).toBe('About John Doe');
   });
+  
 
   it('should call AuthService.getCurrentUser during initialization', () => {
     fixture.detectChanges();

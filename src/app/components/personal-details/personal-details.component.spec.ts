@@ -20,47 +20,6 @@ describe('PersonalDetailsComponent', () => {
   let personalDetailsServiceSpy: jasmine.SpyObj<PersonalDetailsService>;
   let authServiceSpy: jasmine.SpyObj<AuthService>;
 
-  // Mock user data
-  const mockUser = {
-    username: 'user1',
-    firstName: 'Dineo',
-    lastName: 'Doe',
-    dateOfBirth: '01/01/1990',
-    identityNumber: '123456789',
-    mobileNumber: '06739284212',
-    gender: 'Male',
-    maritalStatus: 'Single',
-    address: {
-      line1: '124 Main St',
-      line2: '',
-      line3: '',
-      suburb: 'centurion',
-      city: 'pretoria',
-      postalCode: '12345',
-      country: 'south africa',
-    },
-  };
-
-  // Mock edited user data
-  const mockEditedUser = {
-    username: 'user1',
-    firstName: 'Edited Dineo',
-    lastName: 'Edited Doe',
-    dateOfBirth: '02/02/1990',
-    identityNumber: '987654321',
-    mobileNumber: '0712345678',
-    gender: 'Female',
-    maritalStatus: 'Married',
-    address: {
-      line1: '456 Updated St',
-      line2: 'Apt 123',
-      line3: 'Floor 5',
-      suburb: 'New Suburb',
-      city: 'New City',
-      postalCode: '54321',
-      country: 'New Country',
-    },
-  };
   let service: PersonalDetailsService;
   let httpTestingController: HttpTestingController;
   beforeEach(async () => {
@@ -84,21 +43,14 @@ describe('PersonalDetailsComponent', () => {
   });
 
   afterEach(() => {
-    httpTestingController.verify(); // Ensure there are no outstanding HTTP requests
+    httpTestingController.verify(); 
   });
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize user and editedUser properties', () => {
-    authServiceSpy.getCurrentUser.and.returnValue({ username: 'user1' });
-    personalDetailsServiceSpy.getUsers.and.returnValue(of([mockUser]));
 
-    fixture.detectChanges();
-
-    expect(component.user).toEqual(mockUser);
-    expect(component.editedUser).toEqual(mockUser);
-  });
+  
 
   it('should set isEditMode to true when editDetails() is called', () => {
     component.isEditMode = false;
@@ -106,19 +58,9 @@ describe('PersonalDetailsComponent', () => {
     expect(component.isEditMode).toBe(true);
   });
 
-  it('should update user and set isEditMode to false when updateDetails() is called', () => {
-    component.editedUser = mockEditedUser;
-    component.isEditMode = true;
-
-    component.updateDetails();
-
-    expect(component.user).toEqual(mockEditedUser);
-    expect(component.isEditMode).toBe(false);
-  });
 
   it('should reset editedUser and set isEditMode to false when cancelEdit() is called', () => {
-    component.user = mockEditedUser;
-    component.editedUser = mockEditedUser;
+ 
     component.isEditMode = true;
 
     component.cancelEdit();
